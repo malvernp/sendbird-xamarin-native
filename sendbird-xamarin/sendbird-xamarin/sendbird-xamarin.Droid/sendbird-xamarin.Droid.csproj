@@ -1,0 +1,302 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9EDAEF3C-B466-4ADE-9B33-8F8E58E0B17D}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>sendbird_xamarin.Droid</RootNamespace>
+    <AssemblyName>sendbird_xamarin.Droid</AssemblyName>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <AndroidSupportedAbis>armeabi-v7a;armeabi;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
+    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MvvmCross">
+      <Version>6.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Droid.Support.Core.UI">
+      <Version>6.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Droid.Support.Fragment">
+      <Version>6.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Droid.Support.V7.AppCompat">
+      <Version>6.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Droid.Support.V7.RecyclerView">
+      <Version>6.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Annotations">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Compat">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Core.UI">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Design">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Fragment">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Media.Compat">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Transition">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Vector.Drawable">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Build.Download">
+      <Version>0.4.11</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView">
+      <Version>27.0.2.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Resources\values-v21\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="MvxBindings\" />
+    <Folder Include="Converters\" />
+    <Folder Include="TemplateSelectors\" />
+    <Folder Include="Resources\layout\backups_of_originals\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\splash.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_launcher.png" />
+    <AndroidResource Include="Resources\layout\FirstView.axml" />
+    <AndroidResource Include="Resources\layout\SplashScreen.axml" />
+    <AndroidResource Include="Resources\layout\toolbar.axml" />
+    <AndroidResource Include="Resources\values\arrays.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\values\integers.xml" />
+    <AndroidResource Include="Resources\values\SplashStyle.xml" />
+    <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\layout\ChatsView.axml" />
+    <AndroidResource Include="Resources\drawable\typing_indicator_dot.xml" />
+    <AndroidResource Include="Resources\drawable\selector_btn_white.xml" />
+    <AndroidResource Include="Resources\drawable\selector_btn_send.xml" />
+    <AndroidResource Include="Resources\drawable\selector_btn_menu.xml" />
+    <AndroidResource Include="Resources\drawable\profile_placeholder.xml" />
+    <AndroidResource Include="Resources\drawable\open_chat_file_background.xml" />
+    <AndroidResource Include="Resources\drawable\login_logo.png" />
+    <AndroidResource Include="Resources\drawable\ic_play.png" />
+    <AndroidResource Include="Resources\drawable\ic_open_channels.png" />
+    <AndroidResource Include="Resources\drawable\ic_group_channels.png" />
+    <AndroidResource Include="Resources\drawable\ic_file_message_download.png" />
+    <AndroidResource Include="Resources\drawable\ic_file_message.png" />
+    <AndroidResource Include="Resources\drawable\ic_disconnect.png" />
+    <AndroidResource Include="Resources\drawable\ic_add_white_24dp.xml" />
+    <AndroidResource Include="Resources\drawable\ic_add_black_24dp.xml" />
+    <AndroidResource Include="Resources\drawable\group_chat_file_background.xml" />
+    <AndroidResource Include="Resources\drawable\group_chat_date_background.xml" />
+    <AndroidResource Include="Resources\drawable\group_chat_admin_background.xml" />
+    <AndroidResource Include="Resources\drawable\group_channel_list_unread_background.xml" />
+    <AndroidResource Include="Resources\drawable\group_channel_list_member_background.xml" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\btn_purple.9.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\btn_white_dis.9.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\btn_white_nor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\camera.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\delete_48_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\edit_48_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\group_icon_40_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_arrow_left_white_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_arrow_right_gray_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_settings_white_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_window_close_white_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\icon_block_38_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\img_notification.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\img_notification_large.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\logo_square.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\open_icon_40_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\profile_thumbnail.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\shape.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\shape.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\profile_thumbnail.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\open_icon_40_dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\logo_square.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img_notification_large.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\img_notification.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_block_38_dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_window_close_white_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_settings_white_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_right_gray_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_left_white_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\group_icon_40_dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\edit_48_dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\delete_48_dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\camera.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_white_nor.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_white_dis.9.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\btn_purple.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\shape.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\profile_thumbnail.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\open_icon_40_dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\logo_square.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img_notification_large.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\img_notification.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\icon_block_38_dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_window_close_white_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_settings_white_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_arrow_right_gray_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_arrow_left_white_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\group_icon_40_dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\edit_48_dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\delete_48_dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\camera.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_white_nor.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_white_dis.9.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\btn_purple.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\shape.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\profile_thumbnail.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\open_icon_40_dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\logo_square.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img_notification_large.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\img_notification.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_block_38_dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_window_close_white_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_settings_white_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_right_gray_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_left_white_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\group_icon_40_dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\edit_48_dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\delete_48_dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\camera.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_white_nor.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_white_dis.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\btn_purple.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\shape.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\profile_thumbnail.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\open_icon_40_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\logo_square.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img_notification_large.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\img_notification.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon_block_38_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_window_close_white_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_settings_white_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_right_gray_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_left_white_24_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\group_icon_40_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\edit_48_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\delete_48_dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\camera.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_white_nor.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_white_dis.9.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\btn_purple.9.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\sendbird_ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\sendbird_ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\sendbird_ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\sendbird_ic_launcher.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\sendbird_ic_launcher.png" />
+    <AndroidResource Include="Resources\layout\chatsview_item.axml" />
+    <AndroidResource Include="Resources\layout\layout_typing_indicator.xml" />
+    <AndroidResource Include="Resources\layout\ChattingView.axml" />
+    <AndroidResource Include="Resources\layout\chattingview_item_outgoing_usermessage.axml" />
+    <AndroidResource Include="Resources\layout\chattingview_item_incoming_usermessage.axml" />
+    <AndroidResource Include="Resources\layout\LoginView.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Resources\layout\backups_of_originals\chattingview_item_incoming_usermessage.axml" />
+    <None Include="Resources\layout\backups_of_originals\chattingview_item_outgoing_usermessage.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LinkerPleaseInclude.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="SplashScreen.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\FirstView.cs" />
+    <Compile Include="Views\BaseView.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Views\ChatsView.cs" />
+    <Compile Include="MainApplication.cs" />
+    <Compile Include="Controls\RecyclerViewOnScrollListener.cs" />
+    <Compile Include="Extensions\MvxRecyclerViewExtensions.cs" />
+    <Compile Include="MvxBindings\SwipeRefreshLayoutIsRefreshingTargetBinding.cs" />
+    <Compile Include="Converters\UnreadMessageCountVisibility.cs" />
+    <Compile Include="Controls\MyLinearLayout.cs" />
+    <Compile Include="Controls\TypingIndicator.cs" />
+    <Compile Include="Views\ChattingView.cs" />
+    <Compile Include="TemplateSelectors\ChattingViewTemplateSelector.cs" />
+    <Compile Include="Views\LoginView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\sendbird-xamarin.Core\sendbird-xamarin.Core.csproj">
+      <Project>{C0160A5E-DD71-4CC5-B74D-F2D642A5B986}</Project>
+      <Name>sendbird-xamarin.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\sendbird-connect-models\sendbird-connect-models.csproj">
+      <Project>{73D3ABCF-BD77-4CAE-97CB-B88261260D52}</Project>
+      <Name>sendbird-connect-models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

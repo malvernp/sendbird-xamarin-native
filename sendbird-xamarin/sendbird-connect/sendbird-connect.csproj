@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Services\" />
+    <Folder Include="Utils\PojoFormatters\" />
+    <Folder Include="sendbird-sdk\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Services\ConnectionStatus.cs" />
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\sendbird-connect-models\sendbird-connect-models.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="SendBird">
+      <HintPath>sendbird-sdk\SendBird.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>sendbird-sdk\websocket-sharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,26 @@
+﻿// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// FileName: ISendbirdConnectionManager.cs
+// Project: SendbirdXamarinUI
+// Date Created: 2018/06/27
+// Author: malvern
+// Description: 
+//
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+using System;
+using sendbirdconnect.Services;
+
+namespace sendbirdxamarin.Core.Services
+{
+    public interface ISendbirdConnectionService
+    {
+
+        SendBirdAPI GetAPI();
+
+        //void ListGroupChannels();
+
+        //void InitWithApplicationId();
+
+        //void Connect(string userId);
+    }
+}

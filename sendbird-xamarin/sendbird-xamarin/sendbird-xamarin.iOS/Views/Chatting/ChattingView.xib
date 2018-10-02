@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChattingView">
+            <connections>
+                <outlet property="bottomMargin" destination="heg-UK-qVR" id="cL6-o5-KFV"/>
+                <outlet property="chattingView" destination="bjK-s5-Gus" id="SrY-M5-xOZ"/>
+                <outlet property="imageViewerLoadingIndicator" destination="sxd-4w-V62" id="E3y-dH-0Xw"/>
+                <outlet property="imageViewerLoadingView" destination="a6s-By-YuO" id="DMT-rn-SiU"/>
+                <outlet property="imageViewerLoadingViewNavItem" destination="mPE-Xb-ww6" id="PGy-8F-Duv"/>
+                <outlet property="navItem" destination="I1V-Rv-tkj" id="bYA-GK-Jo0"/>
+                <outlet property="navigationBarHeight" destination="mHy-1u-Adc" id="svB-fJ-0Gf"/>
+                <outlet property="view" destination="7km-4B-V3G" id="Dis-17-dPa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="7km-4B-V3G">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRT-9t-z7S" customClass="CustomNavigationBar">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="mHy-1u-Adc"/>
+                    </constraints>
+                    <items>
+                        <navigationItem title="Title" id="I1V-Rv-tkj"/>
+                    </items>
+                </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjK-s5-Gus">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6s-By-YuO" userLabel="Image Viewer Loading View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TWt-5S-Po5">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <items>
+                                <navigationItem id="mPE-Xb-ww6"/>
+                            </items>
+                        </navigationBar>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="sxd-4w-V62" userLabel="Image Viewer Loading Activity Indicator">
+                            <rect key="frame" x="177" y="323" width="20" height="20"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="TWt-5S-Po5" firstAttribute="leading" secondItem="a6s-By-YuO" secondAttribute="leading" id="8x9-oV-2zo"/>
+                        <constraint firstItem="TWt-5S-Po5" firstAttribute="top" secondItem="a6s-By-YuO" secondAttribute="top" id="UnB-FR-6rq"/>
+                        <constraint firstAttribute="trailing" secondItem="TWt-5S-Po5" secondAttribute="trailing" id="fmd-hG-7WO"/>
+                        <constraint firstItem="sxd-4w-V62" firstAttribute="centerY" secondItem="a6s-By-YuO" secondAttribute="centerY" id="jmC-dl-r8j"/>
+                        <constraint firstItem="sxd-4w-V62" firstAttribute="centerX" secondItem="a6s-By-YuO" secondAttribute="centerX" id="y1n-nF-F5b"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vRT-9t-z7S" secondAttribute="trailing" id="1wZ-BS-FjK"/>
+                <constraint firstItem="bjK-s5-Gus" firstAttribute="leading" secondItem="7km-4B-V3G" secondAttribute="leading" id="2dP-Mz-GFc"/>
+                <constraint firstAttribute="bottom" secondItem="a6s-By-YuO" secondAttribute="bottom" id="C2Z-3Z-5KB"/>
+                <constraint firstItem="vRT-9t-z7S" firstAttribute="leading" secondItem="7km-4B-V3G" secondAttribute="leading" id="aKq-1i-ZHN"/>
+                <constraint firstItem="a6s-By-YuO" firstAttribute="top" secondItem="7km-4B-V3G" secondAttribute="top" id="aYQ-Tm-0x1"/>
+                <constraint firstAttribute="trailing" secondItem="bjK-s5-Gus" secondAttribute="trailing" id="dS5-LS-0cY"/>
+                <constraint firstAttribute="bottom" secondItem="bjK-s5-Gus" secondAttribute="bottom" id="heg-UK-qVR"/>
+                <constraint firstItem="vRT-9t-z7S" firstAttribute="top" secondItem="7km-4B-V3G" secondAttribute="top" id="hsH-eX-meX"/>
+                <constraint firstAttribute="trailing" secondItem="a6s-By-YuO" secondAttribute="trailing" id="qRM-39-kD4"/>
+                <constraint firstItem="bjK-s5-Gus" firstAttribute="top" secondItem="vRT-9t-z7S" secondAttribute="bottom" id="rbQ-XM-aWR"/>
+                <constraint firstItem="a6s-By-YuO" firstAttribute="leading" secondItem="7km-4B-V3G" secondAttribute="leading" id="yrB-G7-yLc"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+</document>

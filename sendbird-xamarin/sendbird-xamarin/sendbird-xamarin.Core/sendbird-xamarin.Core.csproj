@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--/-:cnd -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MvvmCross" Version="6.1.2" />
+    <PackageReference Include="MvvmCross.Plugin.Messenger" Version="6.1.2" />
+    <PackageReference Include="MvvmCross.Plugin.Visibility" Version="6.1.2" />
+  </ItemGroup>
+    
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Notifications\" />
+    <Folder Include="Models\" />
+    <Folder Include="ViewModels\Messages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Services\Interfaces.cs" />
+    <Compile Remove="Models\ChannelInfo.cs" />
+    <Compile Remove="ViewModels\Messages.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\sendbird-connect\sendbird-connect.csproj" />
+    <ProjectReference Include="..\..\sendbird-connect-models\sendbird-connect-models.csproj" />
+  </ItemGroup>
+</Project>
