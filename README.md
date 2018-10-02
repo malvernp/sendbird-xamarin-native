@@ -5,7 +5,7 @@
 implementation of the [Sendbird .net sdk](https://docs.sendbird.com/dotnet)
 
 * Reuse of sendbird-sample-ui views for [SendBird](https://sendbird.com) sample apps found in [IOS](https://github.com/smilefam/SendBird-iOS)  and [ANDROID](https://github.com/smilefam/Sendbird-Android) 
-* Model-View-ViewModel (MVVM) pattern / MVVMCross 
+* Model-View-ViewModel (MVVM) pattern / [MVVMCross](https://www.mvvmcross.com/) 
 * shared business layer
 
 
