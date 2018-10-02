@@ -20,5 +20,6 @@ implementation of the [Sendbird .net sdk](https://docs.sendbird.com/dotnet)
 * listing of group channels and there associated events - typing status, new messages etc
 * listing of messages (incoming and outgoing text messages only), typing event handling
 
-one of the native ios or android sample apps can be used to show workings 
+one of the native ios or android sample apps can be used to communicate and show workings 
+
 
