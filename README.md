@@ -17,6 +17,8 @@ implementation of the [Sendbird .net sdk](https://docs.sendbird.com/dotnet)
 
 ## What has been implemented for this POC - IOS and Android
 
-* listing of group channels and there associated events - typing, new messages etc
-* listing of messages -  typing event handling
+* listing of group channels and there associated events - typing status, new messages etc
+* listing of messages (incoming and outgoing text messages only), typing event handling
+
+one of the native ios or android sample apps can be used to show workings 
 
